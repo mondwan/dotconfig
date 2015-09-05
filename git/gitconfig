@@ -1,0 +1,80 @@
+# [MUST] Define user information which will be recorded in any newly created commits
+[user]
+	name = Mond Wan
+	email = mondwan.1015@gmail.com
+# [OPTIONAL] Define personal working preferences
+[core]
+	# for window, use true
+	# for linux, MacOS, use input
+	autocrlf = input
+	editor = vim
+	whitespace = fix,trailing-space,cr-at-eol,space-before-tab
+	excludesfile = ~/.gitignore
+# I do no see the needs for below sendmail configuration atm
+# [sendemail]
+#	smtpencryption = tls
+#	smtpserver = smtp.gmail.com
+#	smtpuser = pavan.sss1991@gmail.com
+#	smtppass = password
+#	smtpserverport = 587
+# [OPTIONAL] Define which browser to open if entering command git web--browse <FILE>
+[web]
+	browser = google-chrome
+# I do no see the needs for below instaweb configuration atm
+# [instaweb]
+#	httpd = apache2 -f
+# [OPTIONAL] Record commits for solving conflicts
+[rerere]
+	enabled = 1
+	autoupdate = 1
+# [MUST] push the current branch back to the upstream's branch with the same name
+[push]
+	default = simple
+# [MUST] No one hates colorizing output right?
+[color]
+	ui = true
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+# Define tool to use when showing differences
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+# I do no see the needs for below configurations atm
+#[github]
+#	user = pkumar
+#	token = token
+#[gitflow "prefix"]
+#	feature = feature-
+#	release = release-
+#	hotfix = hotfix-
+#	support = support-
+#	versiontag = v
+# [OPTIONAL] Define short cut git commands
+[alias]
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+	unassumeall = !git assumed | xargs git update-index --no-assume-unchanged
+	assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+	#############
+	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+	#############
+	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	#############
+	flat = clone --depth 1
+	subpull = !git submodule foreach git pull --tags origin master
