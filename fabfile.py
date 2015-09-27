@@ -3,22 +3,50 @@ from fabric.api import task
 import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
-SUPPORT_CONFIG_PROJECT = ['git']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack']
 SUPPORT_INSTALL_PROJECT = ['npm']
+
+def config_template(srcDirectory, destDirectory, files):
+    """Template for config_* tasks
+
+    Parameters:
+
+    - `srcDirectory`: Path of source directory relative to the PROJECT_ROOT
+    - `destDirectory`: Full path of destination directory
+    - `files`: Array of filenames which will be copied
+
+    Return:
+
+    - None
+    """
+    # Figure out the full path
+    srcDir = os.path.join(PROJECT_ROOT, srcDirectory)
+
+    print '> COPY CONFIGURATION'
+    for f in files:
+        cmd = 'cp %s/%s %s/.%s' % (srcDir, f, destDirectory, f)
+        local(cmd)
+
 
 def config_git():
     """Config git project
     """
-    git_dir = os.path.join(PROJECT_ROOT, 'git')
     files = ['gitconfig', 'gitignore']
 
     print '> CHECK GIT INSTALLATION'
     local('which git')
 
-    print '> SETUP GLOBAL CONFIGURATION'
-    for f in files:
-        cmd = 'cp %s/%s ~/.%s' % (git_dir, f, f)
-        local(cmd)
+    config_template('git', '~', files)
+
+def config_ack():
+    """Config ack grep
+    """
+    files = ['ackrc']
+
+    print '> CHECK ACK INSTALLATION'
+    local('which ack || which ack-grep')
+
+    config_template('ack', '~', files)
 
 def install_npm():
     """Install npm and install pacakges which required npm
@@ -38,6 +66,8 @@ def config(project):
 
     if project == 'git':
         config_git()
+    elif project == 'ack':
+        config_ack()
 
 @task
 def install(project):

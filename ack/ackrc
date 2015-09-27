@@ -1,0 +1,40 @@
+# Use case-insensitive less as the pager. -r is so we get color escape codes
+--pager=less -ix4SRFX
+
+# Always use color
+--color
+
+# Case-insensitive if query is lower case, otherwise it's case sensitive
+--smart-case
+
+# Show context of search hit
+--context
+
+# follow symlinks
+--follow
+
+# search other filetypes
+--type-add
+ruby=haml,rabl,builder
+
+--type-add
+js=json,tmpl,jst,coffee,ts,jsx
+
+--type-add
+css=sass,scss
+
+# ignore some dirs
+--ignore-dir=.bundle
+--ignore-dir=vendor/bundle
+--ignore-dir=vendor/gems
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=.tmp
+--ignore-dir=coverage
+--ignore-dir=dist
+
+# ignore some files
+--ignore-file=is:tags
+--ignore-file=is:.tags
+--ignore-file=is:.example_statuses
+--ignore-file=is:Session.vim
