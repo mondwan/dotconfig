@@ -1,0 +1,2 @@
+# If Octave crashes when plotting use the Gnuplot graphic toolkit instead of FLTK.
+graphics_toolkit('gnuplot')

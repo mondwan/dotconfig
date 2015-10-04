@@ -3,7 +3,7 @@ from fabric.api import task
 import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
-SUPPORT_CONFIG_PROJECT = ['git', 'ack']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave']
 SUPPORT_INSTALL_PROJECT = ['npm']
 
 def config_template(srcDirectory, destDirectory, files):
@@ -48,6 +48,13 @@ def config_ack():
 
     config_template('ack', '~', files)
 
+def config_octave():
+    """Config octave
+    """
+    files = ['octaverc']
+
+    config_template('octave', '~', files)
+
 def install_npm():
     """Install npm and install pacakges which required npm
     """
@@ -68,6 +75,8 @@ def config(project):
         config_git()
     elif project == 'ack':
         config_ack()
+    elif project == 'octave':
+        config_octave()
 
 @task
 def install(project):
