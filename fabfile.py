@@ -6,6 +6,7 @@ PROJECT_ROOT = os.path.dirname(__file__)
 SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave']
 SUPPORT_INSTALL_PROJECT = ['npm']
 
+
 def config_template(srcDirectory, destDirectory, files):
     """Template for config_* tasks
 
@@ -38,6 +39,7 @@ def config_git():
 
     config_template('git', '~', files)
 
+
 def config_ack():
     """Config ack grep
     """
@@ -48,12 +50,14 @@ def config_ack():
 
     config_template('ack', '~', files)
 
+
 def config_octave():
     """Config octave
     """
     files = ['octaverc']
 
     config_template('octave', '~', files)
+
 
 def install_npm():
     """Install npm and install pacakges which required npm
@@ -64,6 +68,7 @@ def install_npm():
     print '> INSTALL PACKAGES VIA NPM'
     cmd = 'sh %s/npm/install.sh' % PROJECT_ROOT
     local(cmd)
+
 
 @task
 def config(project):
@@ -77,6 +82,7 @@ def config(project):
         config_ack()
     elif project == 'octave':
         config_octave()
+
 
 @task
 def install(project):
