@@ -105,3 +105,14 @@ def install(project):
 
     if project == 'npm':
         install_npm()
+
+
+@task
+def make():
+    """Install and config in one command
+    """
+    for pkg in SUPPORT_INSTALL_PROJECT:
+        install(pkg)
+
+    for pkg in SUPPORT_CONFIG_PROJECT:
+        config(pkg)
