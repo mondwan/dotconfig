@@ -59,6 +59,14 @@ def config_octave():
     config_template('octave', '~', files)
 
 
+def config_eslint():
+    """Config eslint
+    """
+    files = ['eslintrc']
+
+    config_template('eslint', '~', files)
+
+
 def install_npm():
     """Install npm and install pacakges which required npm
     """
@@ -82,10 +90,14 @@ def config(project):
         config_ack()
     elif project == 'octave':
         config_octave()
+    elif project == 'eslint':
+        config_eslint()
 
 
 @task
 def install(project):
+    """Run installation script for given project if possible
+    """
     assert project in SUPPORT_INSTALL_PROJECT
 
     print '> CHECK ROOT PRIVILEGES'
