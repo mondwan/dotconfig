@@ -3,7 +3,7 @@ from fabric.api import task
 import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
-SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint']
 SUPPORT_INSTALL_PROJECT = ['npm']
 
 
@@ -62,7 +62,7 @@ def config_octave():
 def config_eslint():
     """Config eslint
     """
-    files = ['eslintrc']
+    files = ['eslintrc.json']
 
     config_template('eslint', '~', files)
 
