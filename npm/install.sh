@@ -1,12 +1,12 @@
 #!/bin/sh
 
 pkgs=" eslint"
-pkgs+=" babel-eslint"
-pkgs+=" eslint-plugin-react"
-pkgs+=" eslint-config-airbnb"
-pkgs+=" eslint-config-eslint"
-pkgs+=" grunt-cli"
-pkgs+=" bower"
+pkgs="${pkgs} babel-eslint"
+pkgs="${pkgs} eslint-plugin-react"
+pkgs="${pkgs} eslint-config-airbnb"
+pkgs="${pkgs} eslint-config-eslint"
+pkgs="${pkgs} grunt-cli"
+pkgs="${pkgs} bower"
 
 for pkg in ${pkgs}; do
     echo "npm install -g ${pkg}"
