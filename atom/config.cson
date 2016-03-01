@@ -1,0 +1,50 @@
+"*":
+  "autocomplete-python": {}
+  core:
+    themes: [
+      "atom-material-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontSize: 19
+    invisibles: {}
+    showInvisibles: true
+    tabLength: 4
+  "editor-background":
+    box3d:
+      shadowOpacity: 21
+    image:
+      customOverlayColor: true
+      opacity: 11
+      overlayColor:
+        alpha: 1
+        blue: 28
+        green: 28
+        red: 28
+      url: "/home/mondwan/Pictures/Mario-mario-wallpaper-hd-games-1920x1080.jpg"
+    other: {}
+    text:
+      blur: 50
+      expand: 0
+      opacity: 9
+    video: {}
+  "git-plus": {}
+  linter: {}
+  "linter-eslint":
+    eslintrcPath: "~/.eslintrc.json"
+    globalNodePath: "/usr"
+    useGlobalEslint: true
+  "linter-flake8":
+    flakeErrors: true
+    maxLineLength: 80
+    pep8ErrorsToWarnings: true
+  "markdown-pdf": {}
+  "markdown-preview":
+    useGitHubStyle: true
+  "markdown-themeable-pdf":
+    enableCustomFooter: false
+    enableCustomHeader: false
+  "pdf-view": {}
+  react: {}
+  welcome:
+    showOnStartup: false

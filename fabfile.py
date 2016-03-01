@@ -5,11 +5,11 @@ import grp
 import pwd
 
 PROJECT_ROOT = os.path.dirname(__file__)
-SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint']
-SUPPORT_INSTALL_PROJECT = ['npm']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint', 'atom']
+SUPPORT_INSTALL_PROJECT = ['npm', 'atom']
 
 
-def config_template(srcDirectory, destDirectory, files):
+def config_template(srcDirectory, destDirectory, files, force=False):
     """Template for config_* tasks
 
     Parameters:
@@ -17,6 +17,7 @@ def config_template(srcDirectory, destDirectory, files):
     - `srcDirectory`: Path of source directory relative to the PROJECT_ROOT
     - `destDirectory`: Full path of destination directory
     - `files`: Array of filenames which will be copied
+    - `force`: Boolean whether we should override exisiting files
 
     Return:
 
@@ -37,7 +38,13 @@ def config_template(srcDirectory, destDirectory, files):
 
     print '> COPY CONFIGURATION'
     for f in files:
-        cmd = 'ln -s %s/%s %s/.%s' % (srcDir, f, dstDir, f)
+        cmd = 'ln %s -s %s/%s %s/.%s' % (
+            '-f' if force else '',
+            srcDir,
+            f,
+            dstDir,
+            f
+        )
         local(cmd)
         cmd = 'chown -h %s:%s %s/.%s' % (user, group, dstDir, f)
         local(cmd)
@@ -81,6 +88,14 @@ def config_eslint():
     config_template('eslint', '~', files)
 
 
+def config_atom():
+    """Config atom
+    """
+    files = ['config.cson', 'keymap.cson', 'snippets.cson']
+
+    config_template('atom', '~', files, True)
+
+
 def install_npm():
     """Install npm and install pacakges which required npm
     """
@@ -89,6 +104,17 @@ def install_npm():
 
     print '> INSTALL PACKAGES VIA NPM'
     cmd = 'sh %s/npm/install.sh' % PROJECT_ROOT
+    local(cmd)
+
+
+def install_atom():
+    """Install atom and install packages which required apm
+    """
+    print '> CHECK APM INSTALLATION'
+    local('which apm')
+
+    print '> INSTALL PACKAGES VIA APM'
+    cmd = 'apm stars --user mondwan --install'
     local(cmd)
 
 
@@ -106,6 +132,8 @@ def config(project):
         config_octave()
     elif project == 'eslint':
         config_eslint()
+    elif project == 'atom':
+        config_atom()
 
 
 @task
@@ -119,6 +147,8 @@ def install(project):
 
     if project == 'npm':
         install_npm()
+    elif project == 'atom':
+        install_atom()
 
 
 @task

@@ -5,7 +5,7 @@ environment for development as soon as possible.
 
 @author: Mond Wan
 
-@last-modified: 2016-02-29 00:29
+@last-modified: 2016-03-01 18:00
 
 # How to run
 
@@ -30,5 +30,5 @@ environment for development as soon as possible.
 
 ```python
 SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint']
-SUPPORT_INSTALL_PROJECT = ['npm']
+SUPPORT_INSTALL_PROJECT = ['npm', 'atom']
 ```
