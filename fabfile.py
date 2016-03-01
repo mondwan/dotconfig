@@ -24,9 +24,12 @@ def config_template(srcDirectory, destDirectory, files):
     """
     # Figure out the full path
     srcDir = os.path.join(PROJECT_ROOT, srcDirectory)
+    srcDir = os.path.abspath(srcDir)
+    dstDir = os.path.expanduser(destDirectory)
+    dstDir = os.path.abspath(dstDir)
 
     # Get user and group for dest directory
-    statInfo = os.stat(os.path.expanduser(destDirectory))
+    statInfo = os.stat(dstDir)
     uid = statInfo.st_uid
     gid = statInfo.st_gid
     user = pwd.getpwuid(uid)[0]
@@ -34,9 +37,9 @@ def config_template(srcDirectory, destDirectory, files):
 
     print '> COPY CONFIGURATION'
     for f in files:
-        cmd = 'cp %s/%s %s/.%s' % (srcDir, f, destDirectory, f)
+        cmd = 'ln -s %s/%s %s/.%s' % (srcDir, f, dstDir, f)
         local(cmd)
-        cmd = 'chown %s:%s %s/.%s' % (user, group, destDirectory, f)
+        cmd = 'chown -h %s:%s %s/.%s' % (user, group, dstDir, f)
         local(cmd)
 
 
