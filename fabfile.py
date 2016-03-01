@@ -1,6 +1,8 @@
 from fabric.api import local
 from fabric.api import task
 import os
+import grp
+import pwd
 
 PROJECT_ROOT = os.path.dirname(__file__)
 SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint']
@@ -23,9 +25,18 @@ def config_template(srcDirectory, destDirectory, files):
     # Figure out the full path
     srcDir = os.path.join(PROJECT_ROOT, srcDirectory)
 
+    # Get user and group for dest directory
+    statInfo = os.stat(os.path.expanduser(destDirectory))
+    uid = statInfo.st_uid
+    gid = statInfo.st_gid
+    user = pwd.getpwuid(uid)[0]
+    group = grp.getgrgid(gid)[0]
+
     print '> COPY CONFIGURATION'
     for f in files:
         cmd = 'cp %s/%s %s/.%s' % (srcDir, f, destDirectory, f)
+        local(cmd)
+        cmd = 'chown %s:%s %s/.%s' % (user, group, destDirectory, f)
         local(cmd)
 
 
