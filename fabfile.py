@@ -114,7 +114,9 @@ def install_atom():
     local('which apm')
 
     print '> INSTALL PACKAGES VIA APM'
-    cmd = 'apm stars --user mondwan --install'
+    cmd = 'sudo -H -u %s apm stars --user mondwan --install' % (
+        os.environ['SUDO_USER']
+    )
     local(cmd)
 
 
