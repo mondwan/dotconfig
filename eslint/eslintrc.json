@@ -26,6 +26,7 @@
         "prefer-template": 0,
         "no-var": 0,
         "react/prefer-es6-class": [2, "never"],
+        "prefer-rest-params": 0,
 
         // Personal rules
         "indent": [2, 4, {"SwitchCase": 1, "VariableDeclarator": 1}],
