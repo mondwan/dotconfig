@@ -40,6 +40,7 @@
         "no-undef-init": 2,
         "no-mixed-requires": 2,
         "no-path-concat": 2,
+        "no-underscore-dangle": 0,
         "no-console": 0
     }
 }
