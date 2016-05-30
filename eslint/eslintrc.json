@@ -41,6 +41,7 @@
         "no-mixed-requires": 2,
         "no-path-concat": 2,
         "no-underscore-dangle": 0,
+        "no-constant-condition": ["error", {"checkLoops": false}],
         "no-console": 0
     }
 }
