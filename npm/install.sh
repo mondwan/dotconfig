@@ -2,8 +2,8 @@
 
 pkgs=" eslint"
 pkgs="${pkgs} babel-eslint"
-pkgs="${pkgs} eslint-plugin-jsx-a11y"
-pkgs="${pkgs} eslint-plugin-import@^1.16.0"
+pkgs="${pkgs} eslint-plugin-jsx-a11y@^2.2.3"
+pkgs="${pkgs} eslint-plugin-import@^2.1.0"
 pkgs="${pkgs} eslint-plugin-react"
 pkgs="${pkgs} eslint-config-airbnb"
 pkgs="${pkgs} eslint-config-eslint"
