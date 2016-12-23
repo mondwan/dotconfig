@@ -9,6 +9,7 @@ pkgs="${pkgs} eslint-config-airbnb"
 pkgs="${pkgs} eslint-config-eslint"
 pkgs="${pkgs} grunt-cli"
 pkgs="${pkgs} bower"
+pkgs="${pkgs} phantomjs-prebuilt"
 
 for pkg in ${pkgs}; do
     echo "npm install -g ${pkg}"
