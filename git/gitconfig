@@ -30,6 +30,9 @@
 # [MUST] push the current branch back to the upstream's branch with the same name
 [push]
 	default = simple
+# [MUST] Pull with rebase by default
+[pull]
+    rebase = true
 # [MUST] No one hates colorizing output right?
 [color]
 	ui = true
@@ -50,8 +53,15 @@
 # Define tool to use when showing differences
 [diff]
 	tool = vimdiff
+    # Follow suggestions from
+    # https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+	submodule = log
 [difftool]
 	prompt = false
+# Follow suggestions from
+# https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407
+[status]
+    submoduleSummary = true
 # I do no see the needs for below configurations atm
 #[github]
 #	user = pkumar
