@@ -27,12 +27,23 @@
 [rerere]
 	enabled = 1
 	autoupdate = 1
-# [MUST] push the current branch back to the upstream's branch with the same name
+# [MUST]
+[fetch]
+    # Fetch submodule updates if they are available
+    recurseSubmodules=on-demand
+# [MUST]
 [push]
+    # push the current branch back to the upstream's branch with the same name
 	default = simple
+	# Disallow push if submodules has not yet push
+	recurseSubmodules = check
 # [MUST] Pull with rebase by default
 [pull]
     rebase = true
+# [MUST]
+[log]
+    # Print the reference name next to the SHA
+    decorate = short
 # [MUST] No one hates colorizing output right?
 [color]
 	ui = true
