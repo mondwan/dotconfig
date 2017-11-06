@@ -1,10 +1,9 @@
-eslint@^3.x
-babel-eslint@^7.x
-eslint-plugin-jsx-a11y@^4.x
+eslint@^4.x
+babel-eslint@^8.x
+eslint-plugin-jsx-a11y@^6.x
 eslint-plugin-import@^2.x
-eslint-plugin-react@^6.x
-eslint-config-airbnb@^14.x
+eslint-plugin-react@^7.x
+eslint-config-airbnb@^16.x
 eslint-config-eslint@^4.x
 grunt-cli@^1.x
 bower@^1.x
-phantomjs-prebuilt@2.x
