@@ -5,8 +5,17 @@ import grp
 import pwd
 
 PROJECT_ROOT = os.path.dirname(__file__)
-SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint', 'atom']
-SUPPORT_INSTALL_PROJECT = ['npm', 'atom']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint', 'atom', 'vscode']
+SUPPORT_INSTALL_PROJECT = ['npm', 'atom', 'vscode']
+
+
+def _get_directory_username_and_groupname(directory):
+    statInfo = os.stat(directory)
+    uid = statInfo.st_uid
+    gid = statInfo.st_gid
+    user = pwd.getpwuid(uid)[0]
+    group = grp.getgrgid(gid)[0]
+    return user, group
 
 
 def config_template(srcDirectory, destDirectory, files, force=False):
@@ -29,12 +38,7 @@ def config_template(srcDirectory, destDirectory, files, force=False):
     dstDir = os.path.expanduser(destDirectory)
     dstDir = os.path.abspath(dstDir)
 
-    # Get user and group for dest directory
-    statInfo = os.stat(dstDir)
-    uid = statInfo.st_uid
-    gid = statInfo.st_gid
-    user = pwd.getpwuid(uid)[0]
-    group = grp.getgrgid(gid)[0]
+    user, group = _get_directory_username_and_groupname(dstDir)
 
     print '> COPY CONFIGURATION'
     for f in files:
@@ -96,6 +100,23 @@ def config_atom():
     config_template('atom', '~', files, True)
 
 
+def config_vscode():
+    """Config vscode
+    """
+    srcDir = os.path.join(PROJECT_ROOT, 'vscode')
+    srcDir = os.path.abspath(srcDir)
+    dstDir = os.path.expanduser('~')
+    dstDir = os.path.abspath(dstDir)
+    dstFile = '%s/.config/Code/User/settings.json' % dstDir
+
+    cmd = 'ln -f -s %s/settings.json %s' % (srcDir, dstFile)
+    local(cmd)
+
+    user, group = _get_directory_username_and_groupname(dstDir)
+    cmd = 'chown -h %s:%s %s' % (user, group, dstFile)
+    local(cmd)
+
+
 def install_npm():
     """Install npm and install pacakges which required npm
     """
@@ -120,6 +141,17 @@ def install_atom():
     local(cmd)
 
 
+def install_vscode():
+    """Install vscode and install pacakges which required vscode
+    """
+    print '> CHECK vscode INSTALLATION'
+    local('which code')
+
+    print '> INSTALL PACKAGES VIA vscode'
+    cmd = 'sh %s/vscode/install.sh' % PROJECT_ROOT
+    local(cmd)
+
+
 @task
 def config(project):
     """Run configuration script for given project if possible
@@ -136,6 +168,8 @@ def config(project):
         config_eslint()
     elif project == 'atom':
         config_atom()
+     elif project == 'vscode':
+        config_vscode()
 
 
 @task
@@ -151,6 +185,8 @@ def install(project):
         install_npm()
     elif project == 'atom':
         install_atom()
+    elif project == 'vscode':
+        install_vscode()
 
 
 @task

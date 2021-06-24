@@ -5,7 +5,7 @@ environment for development as soon as possible.
 
 @author: Mond Wan
 
-@last-modified: 2016-03-01 18:00
+@last-modified: 2021-06-24 18:00
 
 # How to run
 
@@ -29,6 +29,6 @@ environment for development as soon as possible.
 # List of support $CONFIG_PROJECT $INSTAL_PROJECTL
 
 ```python
-SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint']
-SUPPORT_INSTALL_PROJECT = ['npm', 'atom']
+SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint', 'vscode']
+SUPPORT_INSTALL_PROJECT = ['npm', 'atom', 'vscode']
 ```
