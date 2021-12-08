@@ -5,28 +5,27 @@ environment for development as soon as possible.
 
 @author: Mond Wan
 
-@last-modified: 2021-06-24 18:00
+@last-modified: 8 DEC 2021
 
 # How to run
 
-    # First run: setup repository
-    $> mkdir env
-    $> virtualenv env/
+    # First run: setup repository with python3
+    $> python3 -m venv venv
 
     # Start running
-    $> source env/bin/activate
+    $> source venv/bin/activate
     $> pip install -r requirement.txt
     $> fab make
 
 # Alternative to config or install
 
     # Config certain project only
-    $> fab config:$CONFIG_PROJECT
+    $> fab config --project=$CONFIG_PROJECT
 
     # Install certain project only
-    $> fab install:$INSTALL_PROJECT
+    $> fab install --project=$INSTALL_PROJECT
 
-# List of support $CONFIG_PROJECT $INSTAL_PROJECTL
+# List of support $CONFIG_PROJECT $INSTAL_PROJECT
 
 ```python
 SUPPORT_CONFIG_PROJECT = ['git', 'ack', 'octave', 'eslint', 'vscode']
