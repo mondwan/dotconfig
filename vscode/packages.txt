@@ -1,3 +1,5 @@
+esbenp.prettier-vscode
+gaplo917.gapstylevs
 ms-azuretools.vscode-docker
 dbaeumer.vscode-eslint
 eamodio.gitlens
@@ -10,3 +12,4 @@ bmewburn.vscode-intelephense-client
 ikappas.phpcs
 jebbs.plantuml
 hbenl.vscode-test-explorer
+VisualStudioExptTeam.vscodeintellicode
