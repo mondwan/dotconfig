@@ -222,6 +222,8 @@
     "python.linting.pylintCategorySeverity.convention": "Hint",
     "python.linting.pylintCategorySeverity.warning": "Error",
     "python.linting.flake8Enabled": false,
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "python.testing.promptToConfigure": false,
     "python.formatting.provider": "autopep8",
     "python.languageServer": "Jedi",
