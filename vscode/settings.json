@@ -234,7 +234,7 @@
         "editor.useTabStops": true,
         "editor.wordBasedSuggestions": true,
         "editor.tabSize": 4,
-        "editor.autoIndent": "advanced",
+        "editor.autoIndent": "advanced"
     },
     "debug.console.fontSize": 20,
     "terminal.integrated.fontSize": 20,
@@ -251,7 +251,7 @@
     "[php]": {
         "editor.quickSuggestions": { "comments": true },
         "editor.defaultFormatter": "junstyle.php-cs-fixer",
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": true
     },
     "[javascript]": {
         "editor.codeActionsOnSave": {
