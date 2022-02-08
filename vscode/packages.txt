@@ -13,3 +13,4 @@ ikappas.phpcs
 jebbs.plantuml
 hbenl.vscode-test-explorer
 VisualStudioExptTeam.vscodeintellicode
+GitLab.gitlab-workflow

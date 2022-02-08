@@ -271,5 +271,6 @@
         "editor.formatOnSave": true
     },
     "security.workspace.trust.untrustedFiles": "open",
-    "remote.SSH.remoteServerListenOnSocket": true
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "gitlab.showPipelineUpdateNotifications": true
 }
