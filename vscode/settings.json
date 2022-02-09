@@ -273,5 +273,10 @@
     },
     "security.workspace.trust.untrustedFiles": "open",
     "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.defaultExtensions": [
+        "eamodio.gitlens",
+        "k--kato.intellij-idea-keybindings",
+        "VisualStudioExptTeam.vscodeintellicode"
+    ],
     "gitlab.showPipelineUpdateNotifications": true
 }
