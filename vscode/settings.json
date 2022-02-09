@@ -163,7 +163,7 @@
     "intelephense.completion.triggerParameterHints": true,
     "intelephense.completion.insertUseDeclaration": true,
     "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
-	"intelephense.diagnostics.undefinedTypes": false,
+    "intelephense.diagnostics.undefinedTypes": false,
     "intelephense.diagnostics.undefinedMethods": false,
     "intelephense.diagnostics.undefinedConstants": false,
     "intelephense.diagnostics.undefinedClassConstants": false,
