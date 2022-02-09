@@ -226,6 +226,7 @@
     "python.linting.pydocstyleEnabled": true,
     "python.linting.pycodestyleEnabled": true,
     "python.testing.promptToConfigure": false,
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
     "python.formatting.provider": "autopep8",
     "python.languageServer": "Jedi",
     "python.analysis.watchSearchPaths": false,
