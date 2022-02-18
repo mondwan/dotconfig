@@ -279,7 +279,8 @@
     "remote.SSH.defaultExtensions": [
         "eamodio.gitlens",
         "k--kato.intellij-idea-keybindings",
-        "VisualStudioExptTeam.vscodeintellicode"
+        "VisualStudioExptTeam.vscodeintellicode",
+        "42Crunch.vscode-openapi"
     ],
     "gitlab.showPipelineUpdateNotifications": true,
     "coverage-gutters.showGutterCoverage": false,
