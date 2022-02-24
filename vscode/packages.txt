@@ -21,3 +21,7 @@ ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
 ryanluker.vscode-coverage-gutters
 42Crunch.vscode-openapi
+timonwong.shellcheck
+foxundermoon.shell-format
+Remisa.shellman
+rogalmic.bash-debug
