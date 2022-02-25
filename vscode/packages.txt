@@ -25,3 +25,4 @@ timonwong.shellcheck
 foxundermoon.shell-format
 Remisa.shellman
 rogalmic.bash-debug
+oderwat.indent-rainbow
