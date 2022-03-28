@@ -289,5 +289,6 @@
     ],
     "gitlab.showPipelineUpdateNotifications": true,
     "coverage-gutters.showGutterCoverage": false,
-    "coverage-gutters.showLineCoverage": true
+    "coverage-gutters.showLineCoverage": true,
+    "docker.containers.label": "ContainerName"
 }
