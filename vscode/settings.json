@@ -250,6 +250,7 @@
     "terminal.integrated.shellIntegration.enabled": false,
     "prettier.printWidth": 120,
     "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
     "plantuml.fileExtensions": ".wsd,.pu,.puml,.plantuml,.iuml,.uml",
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "https://www.plantuml.com/plantuml",
