@@ -1,3 +1,4 @@
+dirk-thomas.vscode-lark
 esbenp.prettier-vscode
 gaplo917.gapstylevs
 ms-azuretools.vscode-docker
