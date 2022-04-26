@@ -280,6 +280,10 @@
     "[python]": {
         "editor.formatOnSave": true
     },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
     "security.workspace.trust.untrustedFiles": "open",
     "remote.SSH.remoteServerListenOnSocket": true,
     "remote.SSH.defaultExtensions": [
