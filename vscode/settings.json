@@ -66,6 +66,7 @@
     "editor.emptySelectionClipboard": false,
     "editor.formatOnSaveTimeout": 5000,
     "editor.minimap.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     "scm.diffDecorations": "none",
     "outline.problems.enabled": true,
     "explorer.autoReveal": true,
