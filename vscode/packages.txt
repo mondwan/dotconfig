@@ -6,9 +6,9 @@ dbaeumer.vscode-eslint
 eamodio.gitlens
 k--kato.intellij-idea-keybindings
 junstyle.php-cs-fixer
-felixfbecker.php-debug
+xdebug.php-debug
 neilbrayfield.php-docblocker
-felixfbecker.php-pack
+xdebug.php-pack
 bmewburn.vscode-intelephense-client
 ikappas.phpcs
 jebbs.plantuml
