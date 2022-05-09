@@ -11,6 +11,7 @@ neilbrayfield.php-docblocker
 xdebug.php-pack
 bmewburn.vscode-intelephense-client
 ikappas.phpcs
+emallin.phpunit
 jebbs.plantuml
 hbenl.vscode-test-explorer
 VisualStudioExptTeam.vscodeintellicode
