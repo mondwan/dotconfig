@@ -1,4 +1,5 @@
 {
+    "redhat.telemetry.enabled": true,
     "window.zoomLevel": -1,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
@@ -48,9 +49,7 @@
         "*.php-cs": "php",
         "*.py": "python"
     },
-    "editor.rulers": [
-        120
-    ],
+    "editor.rulers": [120],
     "editor.fontSize": 20,
     "editor.letterSpacing": 0.5,
     "editor.lineHeight": 24,
@@ -90,7 +89,7 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.enabled": false,
-    "intelephense.stubs":[
+    "intelephense.stubs": [
         "apache",
         "bcmath",
         "bz2",
@@ -221,7 +220,7 @@
     ],
     "php-docblocker.returnGap": true,
     "php-docblocker.qualifyClassNames": true,
-    "php-docblocker.author": {"name": "Mond WAN", "email": "mondwan@auralabs.com.hk"},
+    "php-docblocker.author": { "name": "Mond WAN", "email": "mondwan@auralabs.com.hk" },
     "php-cs-fixer.rules": "@PSR12",
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.autoFixBySemicolon": true,
@@ -266,14 +265,14 @@
     },
     "[javascript]": {
         "editor.codeActionsOnSave": {
-           "source.fixAll": true
+            "source.fixAll": true
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
     "[typescript]": {
         "editor.codeActionsOnSave": {
-           "source.fixAll": true
+            "source.fixAll": true
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
