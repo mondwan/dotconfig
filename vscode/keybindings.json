@@ -1,0 +1,23 @@
+[
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u0012" },
+        "when": "isMac && terminalFocus"
+    },
+    {
+        "key": "alt+space",
+        "command": "-editor.action.previewDeclaration",
+        "when": "isMac && editorTextFocus"
+    },
+    {
+        "key": "alt+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "isMac && editorTextFocus"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-editor.action.triggerSuggest",
+        "when": "isMac"
+    }
+]
