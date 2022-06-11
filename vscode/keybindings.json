@@ -19,5 +19,15 @@
         "key": "ctrl+space",
         "command": "-editor.action.triggerSuggest",
         "when": "isMac"
+    },
+    {
+        "key": "alt+k f",
+        "command": "workbench.action.closeFolder",
+        "when": "isMac && emptyWorkspaceSupport && workbenchState != 'empty'"
+    },
+    {
+        "key": "cmd+k f",
+        "command": "-workbench.action.closeFolder",
+        "when": "isMac && emptyWorkspaceSupport && workbenchState != 'empty'"
     }
 ]
