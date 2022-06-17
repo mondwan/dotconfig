@@ -29,5 +29,11 @@
         "key": "cmd+k f",
         "command": "-workbench.action.closeFolder",
         "when": "isMac && emptyWorkspaceSupport && workbenchState != 'empty'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u0005" },
+        "when": "!isMac &&terminalFocus"
     }
 ]
