@@ -35,5 +35,11 @@
         "command": "workbench.action.terminal.sendSequence",
         "args": { "text": "\u0005" },
         "when": "!isMac &&terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": { "text": "\u000b" },
+        "when": "!isMac && terminalFocus"
     }
 ]
