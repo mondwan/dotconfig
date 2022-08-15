@@ -70,6 +70,7 @@
     "workbench.colorTheme": "GapStyle VS",
     "npm.enableScriptExplorer": false,
     "workbench.iconTheme": "vscode-icons",
+    "workbench.layoutControl.enabled": false,
     "git.enabled": true,
     "git.showPushSuccessNotification": true,
     "gitlens.blame.ignoreWhitespace": true,
