@@ -41,5 +41,15 @@
         "command": "workbench.action.terminal.sendSequence",
         "args": { "text": "\u000b" },
         "when": "!isMac && terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "workbench.action.terminal.runRecentCommand",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "workbench.action.quickOpenNavigateNextInViewPicker",
+        "when": "inQuickOpen && inTerminalRunCommandPicker"
     }
 ]
