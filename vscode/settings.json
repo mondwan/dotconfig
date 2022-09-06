@@ -273,6 +273,13 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": false
     },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
     "security.workspace.trust.untrustedFiles": "open",
     "remote.SSH.remoteServerListenOnSocket": true,
     "remote.SSH.defaultExtensions": [
