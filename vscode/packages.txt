@@ -29,3 +29,4 @@ Remisa.shellman
 rogalmic.bash-debug
 oderwat.indent-rainbow
 augustocdias.tasks-shell-input
+ffaraone.opensslutils
