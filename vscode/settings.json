@@ -56,7 +56,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "scm.diffDecorations": "none",
     "outline.problems.enabled": true,
-    "explorer.autoReveal": true,
+    "explorer.autoReveal": false,
     "explorer.confirmDragAndDrop": true,
     "explorer.openEditors.visible": 0,
     "workbench.editor.limit.enabled": true,

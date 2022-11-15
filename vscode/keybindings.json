@@ -51,5 +51,10 @@
         "key": "ctrl+alt+r",
         "command": "workbench.action.quickOpenNavigateNextInViewPicker",
         "when": "inQuickOpen && inTerminalRunCommandPicker"
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.files.action.showActiveFileInExplorer",
+        "when": "editorFocus"
     }
 ]
