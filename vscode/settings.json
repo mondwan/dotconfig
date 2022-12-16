@@ -1,6 +1,7 @@
 {
     "redhat.telemetry.enabled": true,
     "window.zoomLevel": -1,
+    "window.menuBarVisibility": "compact",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "search.exclude": {
@@ -18,6 +19,7 @@
     },
     "search.collapseResults": "alwaysCollapse",
     "search.showLineNumbers": true,
+    "search.useReplacePreview": false,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -78,6 +80,7 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.enabled": false,
+    "isort.args": ["--profile", "black"],
     "intelephense.stubs": [
         "apache",
         "bcmath",
@@ -209,7 +212,7 @@
     ],
     "php-docblocker.returnGap": true,
     "php-docblocker.qualifyClassNames": true,
-    "php-docblocker.author": { "name": "Mond WAN", "email": "mondwan@auralabs.com.hk" },
+    "php-docblocker.author": { "name": "Mond WAN", "email": "mondwan.1015@gmail.com" },
     "php-cs-fixer.rules": "@PSR12",
     "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
     "php-cs-fixer.autoFixBySemicolon": true,
@@ -223,16 +226,10 @@
     "python.linting.pycodestyleEnabled": true,
     "python.testing.promptToConfigure": false,
     "python.testing.autoTestDiscoverOnSaveEnabled": false,
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "120", "--skip-string-normalization"],
     "python.languageServer": "Jedi",
     "python.analysis.watchSearchPaths": false,
-    "[shellscript]": {
-        "editor.insertSpaces": false,
-        "editor.useTabStops": true,
-        "editor.wordBasedSuggestions": true,
-        "editor.tabSize": 4,
-        "editor.autoIndent": "advanced"
-    },
     "debug.console.fontSize": 20,
     "terminal.integrated.fontSize": 20,
     "terminal.integrated.tabs.enabled": true,
@@ -267,7 +264,10 @@
         "editor.formatOnSave": true
     },
     "[python]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
     },
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -279,6 +279,16 @@
     },
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[shellscript]": {
+        "editor.insertSpaces": false,
+        "editor.useTabStops": true,
+        "editor.wordBasedSuggestions": true,
+        "editor.tabSize": 4,
+        "editor.autoIndent": "advanced"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "security.workspace.trust.untrustedFiles": "open",
     "remote.SSH.remoteServerListenOnSocket": true,
