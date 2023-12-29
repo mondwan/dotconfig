@@ -18,6 +18,7 @@ VisualStudioExptTeam.vscodeintellicode
 GitLab.gitlab-workflow
 ms-python.python
 ms-python.black-formatter
+ms-python.isort
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
