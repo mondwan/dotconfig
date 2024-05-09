@@ -56,5 +56,11 @@
         "key": "alt+e",
         "command": "workbench.files.action.showActiveFileInExplorer",
         "when": "editorFocus"
+    },
+    {
+        "key": "shift+escape",
+        "mac": "shift+escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "intellij": "Hide active or last active window (Terminal)"
     }
 ]
