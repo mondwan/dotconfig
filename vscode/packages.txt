@@ -13,6 +13,7 @@ bmewburn.vscode-intelephense-client
 ikappas.phpcs
 emallin.phpunit
 jebbs.plantuml
+hashicorp.hcl
 hbenl.vscode-test-explorer
 VisualStudioExptTeam.vscodeintellicode
 GitLab.gitlab-workflow
