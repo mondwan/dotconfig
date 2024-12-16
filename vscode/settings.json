@@ -242,6 +242,7 @@
   "black-formatter.args": ["--line-length", "120", "--skip-string-normalization"],
   "python.languageServer": "Jedi",
   "python.analysis.watchSearchPaths": false,
+  "python.analysis.languageServerMode":"full",
   "debug.console.fontSize": 20,
   "terminal.integrated.fontSize": 20,
   "terminal.integrated.tabs.enabled": true,
