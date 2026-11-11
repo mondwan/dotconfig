@@ -1,5 +1,11 @@
 {
     "chat.useAgentSkills": true,
+    "chat.fontSize": 18,
+    "chat.editor.fontSize": 19,
+    "chat.tools.urls.autoApprove": {
+        "https://code.visualstudio.com": true,
+        "https://github.com/microsoft/vscode/wiki/*": true
+    },
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "search.exclude": {
@@ -69,17 +75,21 @@
     "explorer.autoReveal": false,
     "explorer.confirmDragAndDrop": true,
     "explorer.openEditors.visible": 0,
+    "workbench.diffEditorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
     "workbench.editor.limit.enabled": true,
     "workbench.editor.limit.perEditorGroup": true,
     "workbench.editor.limit.value": 15,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "left",
     "workbench.enableExperiments": false,
     "workbench.statusBar.visible": true,
     "workbench.colorTheme": "GapStyle VS Dark Modern",
     "npm.enableScriptExplorer": false,
-    "workbench.iconTheme": "vscode-icons",
     "git.enabled": true,
     "git.showPushSuccessNotification": true,
     "gitlens.blame.ignoreWhitespace": true,
@@ -306,7 +316,6 @@
     "remote.SSH.defaultExtensions": [
         "eamodio.gitlens",
         "k--kato.intellij-idea-keybindings",
-        "VisualStudioExptTeam.vscodeintellicode",
         "42Crunch.vscode-openapi"
     ],
     "gitlab.showPipelineUpdateNotifications": true,
@@ -321,7 +330,6 @@
     "xml.server.binary.trustedHashes": [
         "7a3e56f1307ef13ee542f21131713c20aee66aed42ffd1dd417a5e0bbfd84558"
     ],
-    "workbench.layoutControl.enabled": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "window.menuBarVisibility": "compact",
     "search.useReplacePreview": false

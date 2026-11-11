@@ -10,7 +10,6 @@ xdebug.php-debug
 neilbrayfield.php-docblocker
 xdebug.php-pack
 bmewburn.vscode-intelephense-client
-ikappas.phpcs
 emallin.phpunit
 jebbs.plantuml
 hashicorp.hcl
